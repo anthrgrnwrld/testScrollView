@@ -14,6 +14,7 @@
 		36E71EA01D08D6DF00AA0419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E71E9E1D08D6DF00AA0419 /* LaunchScreen.storyboard */; };
 		36E71EAB1D08D6E000AA0419 /* testScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E71EAA1D08D6E000AA0419 /* testScrollViewTests.swift */; };
 		36E71EB61D08D6E000AA0419 /* testScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E71EB51D08D6E000AA0419 /* testScrollViewUITests.swift */; };
+		36E71EC41D08D74900AA0419 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E71EC31D08D74900AA0419 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		36E71EB11D08D6E000AA0419 /* testScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E71EB51D08D6E000AA0419 /* testScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testScrollViewUITests.swift; sourceTree = "<group>"; };
 		36E71EB71D08D6E000AA0419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E71EC31D08D74900AA0419 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				36E71E951D08D6DF00AA0419 /* AppDelegate.swift */,
 				36E71E971D08D6DF00AA0419 /* ViewController.swift */,
+				36E71EC31D08D74900AA0419 /* EditViewController.swift */,
 				36E71E991D08D6DF00AA0419 /* Main.storyboard */,
 				36E71E9C1D08D6DF00AA0419 /* Assets.xcassets */,
 				36E71E9E1D08D6DF00AA0419 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				36E71E981D08D6DF00AA0419 /* ViewController.swift in Sources */,
 				36E71E961D08D6DF00AA0419 /* AppDelegate.swift in Sources */,
+				36E71EC41D08D74900AA0419 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

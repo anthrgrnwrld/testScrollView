@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testScrollView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QF-WU-iTM">
+                                <rect key="frame" x="153" y="319" width="69" height="30"/>
+                                <state key="normal" title="To Library"/>
+                                <connections>
+                                    <action selector="pressToLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfi-ZR-M0L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0QF-WU-iTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PH5-kj-cR9"/>
+                            <constraint firstItem="0QF-WU-iTM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jks-90-JGG"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="kHZ-HU-MUD">
+            <objects>
+                <viewController storyboardIdentifier="EditViewController" id="wAy-hl-g5G" customClass="EditViewController" customModule="testScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pPf-4A-aXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="6U1-5w-lOS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RlG-ub-zpa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdX-UM-SQT">
+                                <rect key="frame" x="-1" y="0.0" width="376" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9Z-hq-gYs">
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="s9Z-hq-gYs" secondAttribute="bottom" id="05y-Xp-ANb"/>
+                                    <constraint firstItem="s9Z-hq-gYs" firstAttribute="height" secondItem="rdX-UM-SQT" secondAttribute="height" id="8uG-KW-6XV"/>
+                                    <constraint firstItem="s9Z-hq-gYs" firstAttribute="top" secondItem="rdX-UM-SQT" secondAttribute="top" id="dPG-aQ-Fhn"/>
+                                    <constraint firstItem="s9Z-hq-gYs" firstAttribute="leading" secondItem="rdX-UM-SQT" secondAttribute="leading" id="oVo-sJ-JYc"/>
+                                    <constraint firstAttribute="trailing" secondItem="s9Z-hq-gYs" secondAttribute="trailing" id="piW-fC-dE0"/>
+                                    <constraint firstItem="s9Z-hq-gYs" firstAttribute="width" secondItem="rdX-UM-SQT" secondAttribute="width" id="yh6-jm-Y3n"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rdX-UM-SQT" firstAttribute="width" secondItem="RlG-ub-zpa" secondAttribute="width" id="Kue-Hr-ZPv"/>
+                            <constraint firstItem="rdX-UM-SQT" firstAttribute="centerY" secondItem="RlG-ub-zpa" secondAttribute="centerY" id="rd6-80-EfR"/>
+                            <constraint firstItem="rdX-UM-SQT" firstAttribute="height" secondItem="RlG-ub-zpa" secondAttribute="height" id="rlr-oG-IOL"/>
+                            <constraint firstItem="rdX-UM-SQT" firstAttribute="centerX" secondItem="RlG-ub-zpa" secondAttribute="centerX" id="zo2-WO-l2U"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pictureView" destination="s9Z-hq-gYs" id="tBS-ch-4Ie"/>
+                        <outlet property="scrollView" destination="rdX-UM-SQT" id="CEb-FD-EA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pb-qF-DWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.5" y="226.5"/>
         </scene>
     </scenes>
 </document>
